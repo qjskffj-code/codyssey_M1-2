@@ -20,6 +20,9 @@ SYSTEM_TEMPLATE = """당신은 '{subject}' 데이터를 분석하는 비서입�
 - 지표 간 상관관계:
 {correlations}
 
+[데이터에 기록된 주요 사건]
+{events}
+
 [해석 시 주의사항]
 {notes}
 
@@ -36,6 +39,11 @@ def build_system_prompt(summary: dict) -> str:
         for item in summary["correlations"]
     ) or "  - 계산할 수 있는 상관관계가 없습니다."
 
+    events = "\n".join(
+        f"  - {item['date']}: {item['memo']} (해당 월 방문자 {item['value']:,}명)"
+        for item in summary["events"]
+    ) or "  - 기록된 사건이 없습니다."
+
     notes = "\n".join(f"  - {note}" for note in summary["notes"])
 
     return SYSTEM_TEMPLATE.format(
@@ -48,6 +56,7 @@ def build_system_prompt(summary: dict) -> str:
         latest=round(summary["metrics"]["latest"]),
         trend=summary["trend"]["description"],
         correlations=correlations,
+        events=events,
         notes=notes,
     )
 

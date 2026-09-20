@@ -3,21 +3,137 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>나만의 AI 비서</title>
+  <title>대전 관광 AI 비서</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>나만의 AI 비서</h1>
-    <p id="server-status">서버 연결 확인 중…</p>
+  <header class="topbar">
+    <div class="topbar__inner">
+      <div class="brand">
+        <span class="brand__mark">🥐</span>
+        <div>
+          <h1 class="brand__title">대전 관광 AI 비서</h1>
+          <p class="brand__subtitle">성심당 검색 관심도와 대전 방문자 수를 함께 읽는 데이터 비서</p>
+        </div>
+      </div>
+      <div class="topbar__actions">
+        <span id="server-status" class="status status--waiting">서버 연결 확인 중</span>
+        <button id="theme-toggle" class="icon-button" type="button" title="다크 모드 전환">🌙</button>
+      </div>
+    </div>
   </header>
 
-  <main>
-    <section id="summary"><h2>데이터 요약</h2></section>
-    <section id="chat"><h2>채팅</h2></section>
-    <section id="data"><h2>데이터 관리</h2></section>
-    <section id="conversations"><h2>대화 기록</h2></section>
+  <main class="layout">
+    <div class="column">
+      <!-- 데이터 요약 -->
+      <section class="card">
+        <div class="card__head">
+          <h2>데이터 요약</h2>
+          <span id="summary-period" class="badge">—</span>
+        </div>
+        <div id="summary-metrics" class="metrics"></div>
+        <div id="summary-trend" class="trend"></div>
+        <div id="summary-correlations" class="correlations"></div>
+        <details id="summary-notes-wrap" class="notes">
+          <summary>해석 시 주의사항</summary>
+          <ul id="summary-notes"></ul>
+        </details>
+      </section>
+
+      <!-- 그래프 -->
+      <section class="card">
+        <div class="card__head">
+          <h2>추이 그래프</h2>
+          <div class="legend">
+            <span class="legend__item"><i class="dot dot--primary"></i>방문자 수</span>
+            <span class="legend__item"><i class="dot dot--accent"></i>성심당 검색 지수</span>
+          </div>
+        </div>
+        <div id="chart" class="chart">
+          <div class="chart__empty">데이터를 불러오는 중…</div>
+        </div>
+      </section>
+
+      <!-- 데이터 관리 -->
+      <section class="card">
+        <div class="card__head">
+          <h2>데이터 관리</h2>
+          <div class="card__actions">
+            <span id="data-count" class="badge">—</span>
+            <button id="export-csv" class="button button--ghost" type="button">CSV 내보내기</button>
+          </div>
+        </div>
+
+        <form id="data-form" class="form">
+          <div class="form__row">
+            <label class="field">
+              <span>연월</span>
+              <input name="date" type="text" placeholder="2026-07" pattern="\d{4}-(0[1-9]|1[0-2])" required />
+            </label>
+            <label class="field">
+              <span>방문자 수</span>
+              <input name="value" type="number" min="0" step="1" placeholder="230000" required />
+            </label>
+            <label class="field">
+              <span>검색 지수</span>
+              <input name="ref_value" type="number" min="0" max="100" step="0.01" placeholder="38.0" />
+            </label>
+          </div>
+          <div class="form__row">
+            <label class="field field--grow">
+              <span>메모</span>
+              <input name="memo" type="text" maxlength="200" placeholder="예: 대전 0시 축제" />
+            </label>
+            <button class="button button--primary" type="submit">추가</button>
+          </div>
+          <p id="data-message" class="message" hidden></p>
+        </form>
+
+        <div class="table-wrap">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>연월</th>
+                <th class="num">방문자</th>
+                <th class="num">검색</th>
+                <th>메모</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="data-body"></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <div class="column">
+      <!-- 채팅 -->
+      <section class="card card--chat">
+        <div class="card__head">
+          <h2>AI 채팅</h2>
+          <button id="new-chat" class="button button--ghost" type="button">새 대화</button>
+        </div>
+        <div id="chat-log" class="chat"></div>
+        <form id="chat-form" class="chat__form">
+          <input id="chat-input" type="text" maxlength="1000" placeholder="예: 성심당 검색량과 방문자는 관계가 있어?" autocomplete="off" required />
+          <button id="chat-send" class="button button--primary" type="submit">보내기</button>
+        </form>
+      </section>
+
+      <!-- 대화 기록 -->
+      <section class="card">
+        <div class="card__head">
+          <h2>대화 기록</h2>
+          <span id="conv-count" class="badge">—</span>
+        </div>
+        <ul id="conv-list" class="conv"></ul>
+      </section>
+    </div>
   </main>
+
+  <footer class="footer">
+    데이터 출처 · 공공데이터포털 한국관광공사 빅데이터 지역별 방문자수, 네이버 데이터랩 검색어 트렌드
+  </footer>
 
   <script src="config.js"></script>
   <script src="app.js"></script>

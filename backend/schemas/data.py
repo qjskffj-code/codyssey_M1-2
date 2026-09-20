@@ -51,6 +51,12 @@ class Correlation(BaseModel):
     description: str
 
 
+class Event(BaseModel):
+    date: str
+    memo: str
+    value: float
+
+
 class SummaryOut(BaseModel):
     subject: str
     period: str
@@ -58,4 +64,5 @@ class SummaryOut(BaseModel):
     metrics: Metrics
     trend: Trend
     correlations: list[Correlation]
+    events: list[Event]
     notes: list[str]

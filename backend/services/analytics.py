@@ -110,6 +110,18 @@ def build_correlations(records: list[dict]) -> list[dict]:
     return results
 
 
+def build_events(records: list[dict]) -> list[dict]:
+    """memo가 적힌 달을 사건 목록으로 뽑는다.
+
+    급등·급락 구간을 AI가 근거를 갖고 설명하려면 이 정보가 필요하다.
+    """
+    return [
+        {"date": record["date"], "memo": record["memo"], "value": round(record["value"])}
+        for record in records
+        if record.get("memo")
+    ]
+
+
 def empty_summary() -> dict:
     return {
         "subject": SUBJECT,
@@ -118,6 +130,7 @@ def empty_summary() -> dict:
         "metrics": {"average": 0, "max": 0, "min": 0, "latest": 0},
         "trend": {"direction": "판단 불가", "change_rate": 0.0, "description": "데이터가 없습니다."},
         "correlations": [],
+        "events": [],
         "notes": ["저장된 데이터가 없습니다."],
     }
 
@@ -140,5 +153,6 @@ def build_summary() -> dict:
         },
         "trend": build_trend(records),
         "correlations": build_correlations(records),
+        "events": build_events(records),
         "notes": NOTES,
     }
