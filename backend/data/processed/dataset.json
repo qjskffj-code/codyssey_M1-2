@@ -1,0 +1,722 @@
+[
+  {
+    "date": "2018-01",
+    "value": 209070,
+    "ref_value": 6.98,
+    "memo": ""
+  },
+  {
+    "date": "2018-02",
+    "value": 232098,
+    "ref_value": 6.96,
+    "memo": ""
+  },
+  {
+    "date": "2018-03",
+    "value": 263635,
+    "ref_value": 7.78,
+    "memo": ""
+  },
+  {
+    "date": "2018-04",
+    "value": 207457,
+    "ref_value": 14.42,
+    "memo": ""
+  },
+  {
+    "date": "2018-05",
+    "value": 220546,
+    "ref_value": 10.37,
+    "memo": ""
+  },
+  {
+    "date": "2018-06",
+    "value": 214034,
+    "ref_value": 6.69,
+    "memo": ""
+  },
+  {
+    "date": "2018-07",
+    "value": 219884,
+    "ref_value": 7.29,
+    "memo": ""
+  },
+  {
+    "date": "2018-08",
+    "value": 222798,
+    "ref_value": 7.65,
+    "memo": ""
+  },
+  {
+    "date": "2018-09",
+    "value": 265040,
+    "ref_value": 7.22,
+    "memo": ""
+  },
+  {
+    "date": "2018-10",
+    "value": 217302,
+    "ref_value": 7.07,
+    "memo": ""
+  },
+  {
+    "date": "2018-11",
+    "value": 209841,
+    "ref_value": 7.58,
+    "memo": ""
+  },
+  {
+    "date": "2018-12",
+    "value": 221307,
+    "ref_value": 7.26,
+    "memo": ""
+  },
+  {
+    "date": "2019-01",
+    "value": 213729,
+    "ref_value": 8.14,
+    "memo": ""
+  },
+  {
+    "date": "2019-02",
+    "value": 242792,
+    "ref_value": 7.15,
+    "memo": ""
+  },
+  {
+    "date": "2019-03",
+    "value": 275154,
+    "ref_value": 7.88,
+    "memo": ""
+  },
+  {
+    "date": "2019-04",
+    "value": 201758,
+    "ref_value": 6.34,
+    "memo": ""
+  },
+  {
+    "date": "2019-05",
+    "value": 213669,
+    "ref_value": 5.57,
+    "memo": ""
+  },
+  {
+    "date": "2019-06",
+    "value": 205143,
+    "ref_value": 5.43,
+    "memo": ""
+  },
+  {
+    "date": "2019-07",
+    "value": 229728,
+    "ref_value": 5.73,
+    "memo": ""
+  },
+  {
+    "date": "2019-08",
+    "value": 224452,
+    "ref_value": 6.28,
+    "memo": ""
+  },
+  {
+    "date": "2019-09",
+    "value": 257205,
+    "ref_value": 6.07,
+    "memo": ""
+  },
+  {
+    "date": "2019-10",
+    "value": 220491,
+    "ref_value": 9.24,
+    "memo": ""
+  },
+  {
+    "date": "2019-11",
+    "value": 225496,
+    "ref_value": 6.75,
+    "memo": ""
+  },
+  {
+    "date": "2019-12",
+    "value": 224645,
+    "ref_value": 7.27,
+    "memo": ""
+  },
+  {
+    "date": "2020-01",
+    "value": 229290,
+    "ref_value": 7.43,
+    "memo": "",
+    "foreign_value": 1801
+  },
+  {
+    "date": "2020-02",
+    "value": 185964,
+    "ref_value": 6.6,
+    "memo": "코로나19 국내 확산 시작",
+    "foreign_value": 1149
+  },
+  {
+    "date": "2020-03",
+    "value": 165843,
+    "ref_value": 6.04,
+    "memo": "사회적 거리두기 시행",
+    "foreign_value": 65
+  },
+  {
+    "date": "2020-04",
+    "value": 174636,
+    "ref_value": 7.1,
+    "memo": "",
+    "foreign_value": 116
+  },
+  {
+    "date": "2020-05",
+    "value": 209655,
+    "ref_value": 7.71,
+    "memo": "",
+    "foreign_value": 108
+  },
+  {
+    "date": "2020-06",
+    "value": 185693,
+    "ref_value": 7.38,
+    "memo": "",
+    "foreign_value": 142
+  },
+  {
+    "date": "2020-07",
+    "value": 176329,
+    "ref_value": 8.73,
+    "memo": "",
+    "foreign_value": 89
+  },
+  {
+    "date": "2020-08",
+    "value": 188416,
+    "ref_value": 10.49,
+    "memo": "",
+    "foreign_value": 122
+  },
+  {
+    "date": "2020-09",
+    "value": 187158,
+    "ref_value": 10.5,
+    "memo": "",
+    "foreign_value": 111
+  },
+  {
+    "date": "2020-10",
+    "value": 203813,
+    "ref_value": 10.23,
+    "memo": "",
+    "foreign_value": 100
+  },
+  {
+    "date": "2020-11",
+    "value": 199118,
+    "ref_value": 14.83,
+    "memo": "",
+    "foreign_value": 101
+  },
+  {
+    "date": "2020-12",
+    "value": 171236,
+    "ref_value": 16.8,
+    "memo": "",
+    "foreign_value": 104
+  },
+  {
+    "date": "2021-01",
+    "value": 164668,
+    "ref_value": 12.32,
+    "memo": "",
+    "foreign_value": 180
+  },
+  {
+    "date": "2021-02",
+    "value": 193569,
+    "ref_value": 11.39,
+    "memo": "",
+    "foreign_value": 249
+  },
+  {
+    "date": "2021-03",
+    "value": 218941,
+    "ref_value": 11.81,
+    "memo": "",
+    "foreign_value": 301
+  },
+  {
+    "date": "2021-04",
+    "value": 171827,
+    "ref_value": 10.32,
+    "memo": "",
+    "foreign_value": 294
+  },
+  {
+    "date": "2021-05",
+    "value": 193593,
+    "ref_value": 11.85,
+    "memo": "",
+    "foreign_value": 313
+  },
+  {
+    "date": "2021-06",
+    "value": 183298,
+    "ref_value": 9.85,
+    "memo": "",
+    "foreign_value": 317
+  },
+  {
+    "date": "2021-07",
+    "value": 179624,
+    "ref_value": 9.49,
+    "memo": "코로나19 4차 유행",
+    "foreign_value": 341
+  },
+  {
+    "date": "2021-08",
+    "value": 169309,
+    "ref_value": 9.95,
+    "memo": "",
+    "foreign_value": 447
+  },
+  {
+    "date": "2021-09",
+    "value": 211137,
+    "ref_value": 10.74,
+    "memo": "",
+    "foreign_value": 449
+  },
+  {
+    "date": "2021-10",
+    "value": 198041,
+    "ref_value": 11.24,
+    "memo": "",
+    "foreign_value": 483
+  },
+  {
+    "date": "2021-11",
+    "value": 198026,
+    "ref_value": 13.19,
+    "memo": "",
+    "foreign_value": 381
+  },
+  {
+    "date": "2021-12",
+    "value": 190747,
+    "ref_value": 17.93,
+    "memo": "",
+    "foreign_value": 343
+  },
+  {
+    "date": "2022-01",
+    "value": 198238,
+    "ref_value": 13.16,
+    "memo": "",
+    "foreign_value": 303
+  },
+  {
+    "date": "2022-02",
+    "value": 183189,
+    "ref_value": 11.0,
+    "memo": "",
+    "foreign_value": 453
+  },
+  {
+    "date": "2022-03",
+    "value": 212426,
+    "ref_value": 11.53,
+    "memo": "",
+    "foreign_value": 398
+  },
+  {
+    "date": "2022-04",
+    "value": 189008,
+    "ref_value": 11.36,
+    "memo": "사회적 거리두기 전면 해제",
+    "foreign_value": 511
+  },
+  {
+    "date": "2022-05",
+    "value": 212201,
+    "ref_value": 17.29,
+    "memo": "",
+    "foreign_value": 633
+  },
+  {
+    "date": "2022-06",
+    "value": 202736,
+    "ref_value": 14.65,
+    "memo": "",
+    "foreign_value": 716
+  },
+  {
+    "date": "2022-07",
+    "value": 212082,
+    "ref_value": 14.77,
+    "memo": "",
+    "foreign_value": 879
+  },
+  {
+    "date": "2022-08",
+    "value": 205261,
+    "ref_value": 18.07,
+    "memo": "",
+    "foreign_value": 1052
+  },
+  {
+    "date": "2022-09",
+    "value": 241730,
+    "ref_value": 19.04,
+    "memo": "",
+    "foreign_value": 1159
+  },
+  {
+    "date": "2022-10",
+    "value": 214490,
+    "ref_value": 34.43,
+    "memo": "",
+    "foreign_value": 1386
+  },
+  {
+    "date": "2022-11",
+    "value": 205874,
+    "ref_value": 30.94,
+    "memo": "",
+    "foreign_value": 1210
+  },
+  {
+    "date": "2022-12",
+    "value": 206563,
+    "ref_value": 53.48,
+    "memo": "",
+    "foreign_value": 1179
+  },
+  {
+    "date": "2023-01",
+    "value": 220497,
+    "ref_value": 52.02,
+    "memo": "실내 마스크 의무 해제",
+    "foreign_value": 1196
+  },
+  {
+    "date": "2023-02",
+    "value": 220270,
+    "ref_value": 47.13,
+    "memo": "",
+    "foreign_value": 1517
+  },
+  {
+    "date": "2023-03",
+    "value": 249102,
+    "ref_value": 42.75,
+    "memo": "",
+    "foreign_value": 1379
+  },
+  {
+    "date": "2023-04",
+    "value": 207700,
+    "ref_value": 39.91,
+    "memo": "",
+    "foreign_value": 2974
+  },
+  {
+    "date": "2023-05",
+    "value": 213968,
+    "ref_value": 39.09,
+    "memo": "",
+    "foreign_value": 2836
+  },
+  {
+    "date": "2023-06",
+    "value": 220111,
+    "ref_value": 35.42,
+    "memo": "",
+    "foreign_value": 2541
+  },
+  {
+    "date": "2023-07",
+    "value": 216912,
+    "ref_value": 37.56,
+    "memo": "",
+    "foreign_value": 2748
+  },
+  {
+    "date": "2023-08",
+    "value": 222613,
+    "ref_value": 45.01,
+    "memo": "제1회 대전 0시 축제 개최",
+    "foreign_value": 3432
+  },
+  {
+    "date": "2023-09",
+    "value": 248101,
+    "ref_value": 42.28,
+    "memo": "",
+    "foreign_value": 3344
+  },
+  {
+    "date": "2023-10",
+    "value": 231060,
+    "ref_value": 40.64,
+    "memo": "",
+    "foreign_value": 3490
+  },
+  {
+    "date": "2023-11",
+    "value": 216265,
+    "ref_value": 41.06,
+    "memo": "",
+    "foreign_value": 2800
+  },
+  {
+    "date": "2023-12",
+    "value": 228960,
+    "ref_value": 82.14,
+    "memo": "",
+    "foreign_value": 2306
+  },
+  {
+    "date": "2024-01",
+    "value": 212745,
+    "ref_value": 56.98,
+    "memo": "",
+    "foreign_value": 2036,
+    "junggu_share": 18.85
+  },
+  {
+    "date": "2024-02",
+    "value": 245338,
+    "ref_value": 53.93,
+    "memo": "",
+    "foreign_value": 2337,
+    "junggu_share": 19.06
+  },
+  {
+    "date": "2024-03",
+    "value": 265450,
+    "ref_value": 51.68,
+    "memo": "",
+    "foreign_value": 2764,
+    "junggu_share": 17.94
+  },
+  {
+    "date": "2024-04",
+    "value": 214540,
+    "ref_value": 67.14,
+    "memo": "성심당 대전역점 임대료 논란 보도",
+    "foreign_value": 2974,
+    "junggu_share": 19.19
+  },
+  {
+    "date": "2024-05",
+    "value": 230999,
+    "ref_value": 100.0,
+    "memo": "",
+    "foreign_value": 2645,
+    "junggu_share": 19.18
+  },
+  {
+    "date": "2024-06",
+    "value": 224192,
+    "ref_value": 77.89,
+    "memo": "",
+    "foreign_value": 2504,
+    "junggu_share": 18.95
+  },
+  {
+    "date": "2024-07",
+    "value": 223022,
+    "ref_value": 71.79,
+    "memo": "",
+    "foreign_value": 2669,
+    "junggu_share": 19.32
+  },
+  {
+    "date": "2024-08",
+    "value": 231393,
+    "ref_value": 63.62,
+    "memo": "제2회 대전 0시 축제 개최",
+    "foreign_value": 2917,
+    "junggu_share": 19.82
+  },
+  {
+    "date": "2024-09",
+    "value": 257464,
+    "ref_value": 64.33,
+    "memo": "",
+    "foreign_value": 3531,
+    "junggu_share": 18.51
+  },
+  {
+    "date": "2024-10",
+    "value": 222252,
+    "ref_value": 59.57,
+    "memo": "",
+    "foreign_value": 3983,
+    "junggu_share": 18.93
+  },
+  {
+    "date": "2024-11",
+    "value": 225977,
+    "ref_value": 51.21,
+    "memo": "",
+    "foreign_value": 3208,
+    "junggu_share": 18.7
+  },
+  {
+    "date": "2024-12",
+    "value": 222522,
+    "ref_value": 63.69,
+    "memo": "",
+    "foreign_value": 2508,
+    "junggu_share": 19.28
+  },
+  {
+    "date": "2025-01",
+    "value": 234213,
+    "ref_value": 64.61,
+    "memo": "",
+    "foreign_value": 2295,
+    "junggu_share": 19.54
+  },
+  {
+    "date": "2025-02",
+    "value": 230737,
+    "ref_value": 60.55,
+    "memo": "",
+    "foreign_value": 2241,
+    "junggu_share": 19.18
+  },
+  {
+    "date": "2025-03",
+    "value": 263586,
+    "ref_value": 53.37,
+    "memo": "",
+    "foreign_value": 2899,
+    "junggu_share": 18.72
+  },
+  {
+    "date": "2025-04",
+    "value": 221722,
+    "ref_value": 53.29,
+    "memo": "",
+    "foreign_value": 3234,
+    "junggu_share": 19.69
+  },
+  {
+    "date": "2025-05",
+    "value": 276783,
+    "ref_value": 57.42,
+    "memo": "",
+    "foreign_value": 3169,
+    "junggu_share": 19.97
+  },
+  {
+    "date": "2025-06",
+    "value": 242557,
+    "ref_value": 45.71,
+    "memo": "",
+    "foreign_value": 3047,
+    "junggu_share": 19.84
+  },
+  {
+    "date": "2025-07",
+    "value": 244822,
+    "ref_value": 49.35,
+    "memo": "",
+    "foreign_value": 3783,
+    "junggu_share": 20.25
+  },
+  {
+    "date": "2025-08",
+    "value": 253169,
+    "ref_value": 56.09,
+    "memo": "제3회 대전 0시 축제 개최",
+    "foreign_value": 3396,
+    "junggu_share": 20.9
+  },
+  {
+    "date": "2025-09",
+    "value": 256373,
+    "ref_value": 46.48,
+    "memo": "",
+    "foreign_value": 4290,
+    "junggu_share": 18.89
+  },
+  {
+    "date": "2025-10",
+    "value": 265651,
+    "ref_value": 57.74,
+    "memo": "",
+    "foreign_value": 4252,
+    "junggu_share": 19.87
+  },
+  {
+    "date": "2025-11",
+    "value": 251971,
+    "ref_value": 50.5,
+    "memo": "",
+    "foreign_value": 3747,
+    "junggu_share": 18.45
+  },
+  {
+    "date": "2025-12",
+    "value": 245924,
+    "ref_value": 89.57,
+    "memo": "",
+    "foreign_value": 2758,
+    "junggu_share": 19.44
+  },
+  {
+    "date": "2026-01",
+    "value": 241207,
+    "ref_value": 74.71,
+    "memo": "",
+    "foreign_value": 2427,
+    "junggu_share": 19.69
+  },
+  {
+    "date": "2026-02",
+    "value": 262753,
+    "ref_value": 57.7,
+    "memo": "",
+    "foreign_value": 2395,
+    "junggu_share": 19.84
+  },
+  {
+    "date": "2026-03",
+    "value": 287232,
+    "ref_value": 42.08,
+    "memo": "",
+    "foreign_value": 3321,
+    "junggu_share": 18.85
+  },
+  {
+    "date": "2026-04",
+    "value": 223461,
+    "ref_value": 41.06,
+    "memo": "",
+    "foreign_value": 3970,
+    "junggu_share": 20.12
+  },
+  {
+    "date": "2026-05",
+    "value": 253596,
+    "ref_value": 43.73,
+    "memo": "",
+    "foreign_value": 4103,
+    "junggu_share": 20.22
+  },
+  {
+    "date": "2026-06",
+    "value": 231394,
+    "ref_value": 38.0,
+    "memo": "",
+    "foreign_value": 3854,
+    "junggu_share": 20.16
+  }
+]

@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 16px;
+  font-family: system-ui, -apple-system, "Malgun Gothic", sans-serif;
+  background: #f7f7f8;
+  color: #1f2328;
+}
+
+main {
+  display: grid;
+  gap: 16px;
+}
+
+section {
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #e3e5e8;
+  border-radius: 8px;
+}
