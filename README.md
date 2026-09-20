@@ -24,8 +24,12 @@
 | 대상 | URL |
 |---|---|
 | 프론트엔드 | (배포 후 기재) |
-| 백엔드 API | (배포 후 기재) |
-| Swagger UI | (배포 후 기재) |
+| 백엔드 API | <https://codyssey-m1-2-vix0.onrender.com> |
+| Swagger UI | <https://codyssey-m1-2-vix0.onrender.com/docs> |
+
+> 백엔드는 Render 무료 인스턴스라 15분간 요청이 없으면 잠듭니다.
+> 첫 요청은 30초~1분 걸릴 수 있어, 프론트엔드가 화면을 열 때 `/health`를 먼저 호출해 서버를 깨우고
+> 그동안 안내 문구를 표시합니다.
 
 ## 데이터
 

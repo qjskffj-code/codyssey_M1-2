@@ -48,23 +48,31 @@ def describe_correlation(r: float) -> str:
     return f"{level} {'양' if r > 0 else '음'}의 상관관계"
 
 
-def build_trend(values: list[float]) -> dict:
+def build_trend(records: list[dict]) -> dict:
     """최근 3개월 평균을 1년 전 같은 3개월과 비교한다.
 
     방문자 수는 계절성이 강해서 직전 3개월과 비교하면 계절 변동을 추세로 오해하게 된다.
     1년 치가 모이지 않은 경우에만 직전 3개월과 비교한다.
+    비교 구간을 응답에 함께 담아야 AI가 기간을 추측하지 않는다.
     """
-    if len(values) < 6:
+    if len(records) < 6:
         return {"direction": "판단 불가", "change_rate": 0.0, "description": "데이터가 부족합니다."}
+
+    values = [record["value"] for record in records]
+    months = [record["date"] for record in records]
 
     recent = sum(values[-3:]) / 3
     if len(values) >= 15:
-        previous = sum(values[-15:-12]) / 3
+        previous_slice = slice(-15, -12)
         basis = "전년 동기"
     else:
-        previous = sum(values[-6:-3]) / 3
+        previous_slice = slice(-6, -3)
         basis = "직전 3개월"
+
+    previous = sum(values[previous_slice]) / 3
     rate = round((recent / previous - 1) * 100, 1) if previous else 0.0
+    recent_label = f"{months[-3]}~{months[-1]}"
+    previous_label = f"{months[previous_slice][0]}~{months[previous_slice][-1]}"
 
     if rate > TREND_THRESHOLD:
         direction = "증가"
@@ -76,7 +84,10 @@ def build_trend(values: list[float]) -> dict:
     return {
         "direction": direction,
         "change_rate": rate,
-        "description": f"최근 3개월 평균이 {basis} 대비 {rate:+.1f}% ({direction})",
+        "description": (
+            f"최근 3개월({recent_label}) 평균이 {basis}({previous_label}) 대비 "
+            f"{rate:+.1f}% ({direction})"
+        ),
     }
 
 
@@ -127,7 +138,7 @@ def build_summary() -> dict:
             "min": round(min(values)),
             "latest": round(values[-1]),
         },
-        "trend": build_trend(values),
+        "trend": build_trend(records),
         "correlations": build_correlations(records),
         "notes": NOTES,
     }
