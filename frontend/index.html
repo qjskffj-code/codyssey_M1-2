@@ -8,12 +8,12 @@
 </head>
 <body>
   <header class="topbar">
-    <div class="topbar__inner">
+    <div class="wrap topbar__inner">
       <div class="brand">
         <span class="brand__mark">🥐</span>
         <div>
           <h1 class="brand__title">대전 관광 AI 비서</h1>
-          <p class="brand__subtitle">성심당 검색 관심도와 대전 방문자 수를 함께 읽는 데이터 비서</p>
+          <p class="brand__subtitle">성심당 검색 관심도와 대전 방문자 수를 함께 읽습니다</p>
         </div>
       </div>
       <div class="topbar__actions">
@@ -23,48 +23,68 @@
     </div>
   </header>
 
-  <main class="layout">
-    <div class="column">
-      <!-- 데이터 요약 -->
-      <section class="card">
-        <div class="card__head">
-          <h2>데이터 요약</h2>
-          <span id="summary-period" class="badge">—</span>
+  <!-- 결론을 먼저 보여주는 인사이트 밴드 -->
+  <section class="hero">
+    <div class="wrap hero__inner">
+      <p class="hero__eyebrow">핵심 인사이트</p>
+      <h2 id="hero-headline" class="hero__headline">데이터를 불러오는 중…</h2>
+      <div id="hero-stats" class="hero__stats"></div>
+    </div>
+  </section>
+
+  <main class="wrap layout">
+    <!-- 왼쪽: 인사이트 / 데이터 탭 -->
+    <div class="panel">
+      <nav class="tabs" role="tablist">
+        <button class="tab tab--active" type="button" data-tab="insight" role="tab">인사이트</button>
+        <button class="tab" type="button" data-tab="data" role="tab">데이터 관리</button>
+      </nav>
+
+      <section id="tab-insight" class="tabpanel" role="tabpanel">
+        <div class="section-head">
+          <h3>추이</h3>
+          <div class="chips" id="range-chips">
+            <button class="chip chip--active" type="button" data-range="all">전체</button>
+            <button class="chip" type="button" data-range="recent36">최근 3년</button>
+            <button class="chip" type="button" data-range="post-covid">코로나 이후</button>
+          </div>
         </div>
-        <div id="summary-metrics" class="metrics"></div>
-        <div id="summary-trend" class="trend"></div>
-        <div id="summary-correlations" class="correlations"></div>
-        <details id="summary-notes-wrap" class="notes">
+
+        <div id="chart" class="chart">
+          <div class="chart__empty">불러오는 중…</div>
+        </div>
+
+        <div class="chart__foot">
+          <div class="legend">
+            <span class="legend__item"><i class="dot dot--primary"></i>방문자 수</span>
+            <span class="legend__item"><i class="dot dot--accent"></i>성심당 검색 지수</span>
+            <span class="legend__item"><i class="dot dot--event"></i>기록된 사건</span>
+          </div>
+          <p id="range-stats" class="range-stats"></p>
+        </div>
+
+        <div class="section-head section-head--gap">
+          <h3>지표 관계</h3>
+        </div>
+        <div id="corr-primary" class="corr-primary"></div>
+        <div id="corr-others" class="corr-others"></div>
+
+        <details class="notes">
           <summary>해석 시 주의사항</summary>
           <ul id="summary-notes"></ul>
         </details>
       </section>
 
-      <!-- 그래프 -->
-      <section class="card">
-        <div class="card__head">
-          <h2>추이 그래프</h2>
-          <div class="legend">
-            <span class="legend__item"><i class="dot dot--primary"></i>방문자 수</span>
-            <span class="legend__item"><i class="dot dot--accent"></i>성심당 검색 지수</span>
-          </div>
-        </div>
-        <div id="chart" class="chart">
-          <div class="chart__empty">데이터를 불러오는 중…</div>
-        </div>
-      </section>
-
-      <!-- 데이터 관리 -->
-      <section class="card">
-        <div class="card__head">
-          <h2>데이터 관리</h2>
-          <div class="card__actions">
-            <span id="data-count" class="badge">—</span>
+      <section id="tab-data" class="tabpanel" role="tabpanel" hidden>
+        <div class="section-head">
+          <h3>저장된 데이터 <span id="data-count" class="badge">—</span></h3>
+          <div class="actions">
+            <button id="toggle-form" class="button button--ghost" type="button">+ 데이터 추가</button>
             <button id="export-csv" class="button button--ghost" type="button">CSV 내보내기</button>
           </div>
         </div>
 
-        <form id="data-form" class="form">
+        <form id="data-form" class="form" hidden>
           <div class="form__row">
             <label class="field">
               <span>연월</span>
@@ -81,13 +101,13 @@
           </div>
           <div class="form__row">
             <label class="field field--grow">
-              <span>메모</span>
+              <span>메모 (사건 기록 · AI 답변 근거로 쓰입니다)</span>
               <input name="memo" type="text" maxlength="200" placeholder="예: 대전 0시 축제" />
             </label>
             <button class="button button--primary" type="submit">추가</button>
           </div>
-          <p id="data-message" class="message" hidden></p>
         </form>
+        <p id="data-message" class="message" hidden></p>
 
         <div class="table-wrap">
           <table class="table">
@@ -106,32 +126,38 @@
       </section>
     </div>
 
-    <div class="column">
-      <!-- 채팅 -->
-      <section class="card card--chat">
-        <div class="card__head">
-          <h2>AI 채팅</h2>
+    <!-- 오른쪽: 채팅 + 대화 기록 -->
+    <div class="panel panel--chat">
+      <div class="section-head">
+        <h3>AI 채팅</h3>
+        <div class="actions">
+          <button id="toggle-history" class="button button--ghost" type="button">
+            기록 <span id="conv-count" class="count">0</span>
+          </button>
           <button id="new-chat" class="button button--ghost" type="button">새 대화</button>
         </div>
-        <div id="chat-log" class="chat"></div>
-        <form id="chat-form" class="chat__form">
-          <input id="chat-input" type="text" maxlength="1000" placeholder="예: 성심당 검색량과 방문자는 관계가 있어?" autocomplete="off" required />
-          <button id="chat-send" class="button button--primary" type="submit">보내기</button>
-        </form>
-      </section>
+      </div>
 
-      <!-- 대화 기록 -->
-      <section class="card">
-        <div class="card__head">
-          <h2>대화 기록</h2>
-          <span id="conv-count" class="badge">—</span>
-        </div>
+      <div id="history-panel" class="history" hidden>
         <ul id="conv-list" class="conv"></ul>
-      </section>
+      </div>
+
+      <div id="chat-log" class="chat"></div>
+
+      <div class="suggestions" id="suggestions">
+        <button class="chip" type="button">2020년에 방문자가 줄어든 이유가 뭐야?</button>
+        <button class="chip" type="button">성심당 검색량과 방문자는 관계가 있어?</button>
+        <button class="chip" type="button">가장 방문자가 많았던 때는 언제야?</button>
+      </div>
+
+      <form id="chat-form" class="chat__form">
+        <input id="chat-input" type="text" maxlength="1000" placeholder="데이터에 대해 물어보세요" autocomplete="off" required />
+        <button id="chat-send" class="button button--primary" type="submit">보내기</button>
+      </form>
     </div>
   </main>
 
-  <footer class="footer">
+  <footer class="wrap footer">
     데이터 출처 · 공공데이터포털 한국관광공사 빅데이터 지역별 방문자수, 네이버 데이터랩 검색어 트렌드
   </footer>
 
