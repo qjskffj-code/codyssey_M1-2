@@ -19,3 +19,6 @@ Thumbs.db
 
 # Vercel
 .vercel/
+
+# 공식 미션지 (저장소에 포함하지 않음)
+코디세이_*_공식미션지.txt
