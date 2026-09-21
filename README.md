@@ -23,7 +23,7 @@
 
 | 대상 | URL |
 |---|---|
-| 프론트엔드 | (배포 후 기재) |
+| 프론트엔드 | <https://codyssey-m1-2-theta.vercel.app> |
 | 백엔드 API | <https://codyssey-m1-2-vix0.onrender.com> |
 | Swagger UI | <https://codyssey-m1-2-vix0.onrender.com/docs> |
 
