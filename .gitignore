@@ -22,3 +22,6 @@ Thumbs.db
 
 # 공식 미션지 (저장소에 포함하지 않음)
 코디세이_*_공식미션지.txt
+
+# 원본 영상은 저장소에 포함하지 않음 (README는 GIF 사용)
+assets/videos/*.mp4
